@@ -1,0 +1,1 @@
+var panel = $("#quiz-part");
