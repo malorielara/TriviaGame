@@ -1,5 +1,6 @@
 var panel = $("#quiz-part");
 
+// questions asked
 var questions = [{
     question: "Who is not a character in Friends?",
     answers: ["Phoebe", "Rachel", "Ross", "Karen"],
@@ -34,3 +35,17 @@ var questions = [{
     correctanswer: "10"
 }
 ];
+
+var timer;
+var triviaGame = {
+    correct: 0,
+    incorrect: 0,
+    counter: 120,
+
+    countdown: function() {
+        triviaGame.counter--;
+        if(triviaGame.counter == 0) {
+            console.log("TIME UP!");
+        }
+    }
+}
