@@ -9,7 +9,8 @@ $(document).on("click", "#done", function() {
 var panel = $("#quiz-part");
 
 // questions asked
-var questions = [{
+var questions = [
+    {
     question: "Who is not a character in Friends?",
     answers: ["Phoebe", "Rachel", "Ross", "Karen"],
     correctanswer: "Karen"
@@ -67,7 +68,7 @@ var triviaGame = {
         $("#start").remove();
 
         for (var i = 0; i < questions.length; i++) {
-
+            panel.append("<h2>" + questions[i].question + "</h2>");
             for (var j = 0; j < questions[i].answers.length; j++) {
 
             }
@@ -77,11 +78,54 @@ var triviaGame = {
 
     // done function
     done: function() {
-        if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct) {
-            correct++;
+        if($(this).val() == questions[1].correct) {
+            triviaGame.correct++;
         } else {
-            incorrect++;
+            triviaGame.incorrect++;
         };
+
+        if($(this).val() == questions[2].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
+        if($(this).val() == questions[3].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
+        if($(this).val() == questions[4].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
+        if($(this).val() == questions[5].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
+        if($(this).val() == questions[6].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
+        if($(this).val() == questions[7].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
+        if($(this).val() == questions[8].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
         this.results();
     },
 
