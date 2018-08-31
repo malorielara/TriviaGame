@@ -1,3 +1,11 @@
+$(document).on("click", "#start", function() {
+    triviaGame.start();
+});
+
+$(document).on("click", "#done", function() {
+    triviaGame.done();
+});
+
 var box = $("#quiz-part");
 
 // questions asked
@@ -33,8 +41,7 @@ var questions = [{
     question: "How many total seasons of Friends?",
     answers: ["12", "14", "10", "8"],
     correctanswer: "10"
-}
-];
+}];
 
 var timer;
 var triviaGame = {
@@ -42,31 +49,39 @@ var triviaGame = {
     incorrect: 0,
     counter: 120,
 
-    countdown: function() {
+    countdown: function () {
         // counting down 
         triviaGame.counter--;
-        if(triviaGame.counter == 0) {
+        if (triviaGame.counter == 0) {
             console.log("TIME UP!");
         }
         // once time is up, game is over
-    game.done();
-},
-        // start function
-        start: function() {
-            timer = setInterval(triviaGame.counter, 1000);
+        game.done();
+    },
+    // start function
+    start: function () {
+        timer = setInterval(triviaGame.counter, 1000);
 
-            // add time remaining
+        // add time remaining
 
-            $("#start").remove();
+        $("#start").remove();
 
-            for(var i = 0; i < questions.length; i++) {
-                
-                for(var j = 0; j < questions[i].answers.length; j++) {
+        for (var i = 0; i < questions.length; i++) {
 
-                }
-                box.append("<button id = 'done'>DONE</button>");
+            for (var j = 0; j < questions[i].answers.length; j++) {
+
             }
+            box.append("<button id = 'done'>DONE</button>");
         }
+    },
 
+    done: function() {
 
+    },
+
+    results: function() {
+        clearInterval(timer);
     }
+
+
+}
