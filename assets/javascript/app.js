@@ -78,6 +78,12 @@ var triviaGame = {
 
     // done function
     done: function() {
+        if($(this).val() == questions[0].correct) {
+            triviaGame.correct++;
+        } else {
+            triviaGame.incorrect++;
+        };
+
         if($(this).val() == questions[1].correct) {
             triviaGame.correct++;
         } else {
@@ -115,12 +121,6 @@ var triviaGame = {
         };
 
         if($(this).val() == questions[7].correct) {
-            triviaGame.correct++;
-        } else {
-            triviaGame.incorrect++;
-        };
-
-        if($(this).val() == questions[8].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
