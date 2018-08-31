@@ -62,7 +62,7 @@ var triviaGame = {
     start: function () {
         timer = setInterval(triviaGame.counter, 1000);
 
-        // add time remaining
+        // TODO: add 'time remaining'
 
         $("#start").remove();
 
@@ -75,10 +75,18 @@ var triviaGame = {
         }
     },
 
+    // done function
     done: function() {
-
+        if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct) {
+            correct++;
+        } else {
+            incorrect++;
+        };
+        this.results();
     },
 
+    // shows results
+    // shows how many questions answered right and wrong
     results: function() {
         clearInterval(timer);
 
