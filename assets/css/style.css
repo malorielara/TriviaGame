@@ -1,0 +1,55 @@
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+#wrapper {
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 20px;
+    height: 100%;
+    background-color: slategray;
+    border: 0;
+}
+
+button {
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: 10px auto 0;
+    font-size: 15px;
+    font-weight: bold;
+    background: whitesmoke;
+    border-color: black;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 77px;
+    font-weight: bold;
+    color: white;
+}  
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+  
+h3 {
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+  
+#start {
+    margin-top: 10%;
+    background: white;
+    border: 2px solid black;
+}
