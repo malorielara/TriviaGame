@@ -43,14 +43,23 @@ var triviaGame = {
     counter: 120,
 
     countdown: function() {
+        // counting down 
         triviaGame.counter--;
         if(triviaGame.counter == 0) {
             console.log("TIME UP!");
         }
+        // once time is up, game is over
         game.done();
 
+        // start function
         start: function() {
-            timer = setInterval(triviaGame.counter);
+            timer = setInterval(triviaGame.counter, 1000);
+
+            // add time remaining
+
+            $("#start").remove();
+
+            for()
         }
 
 
