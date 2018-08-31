@@ -1,4 +1,4 @@
-var panel = $("#quiz-part");
+var box = $("#quiz-part");
 
 // questions asked
 var questions = [{
@@ -49,8 +49,8 @@ var triviaGame = {
             console.log("TIME UP!");
         }
         // once time is up, game is over
-        game.done();
-
+    game.done();
+},
         // start function
         start: function() {
             timer = setInterval(triviaGame.counter, 1000);
@@ -59,9 +59,14 @@ var triviaGame = {
 
             $("#start").remove();
 
-            for()
+            for(var i = 0; i < questions.length; i++) {
+                
+                for(var j = 0; j < questions[i].answers.length; j++) {
+
+                }
+                box.append("<button id = 'done'>DONE</button>");
+            }
         }
 
 
     }
-}
