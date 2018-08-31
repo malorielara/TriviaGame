@@ -6,7 +6,7 @@ $(document).on("click", "#done", function() {
     triviaGame.done();
 });
 
-var box = $("#quiz-part");
+var panel = $("#quiz-part");
 
 // questions asked
 var questions = [{
@@ -71,7 +71,7 @@ var triviaGame = {
             for (var j = 0; j < questions[i].answers.length; j++) {
 
             }
-            box.append("<button id = 'done'>DONE</button>");
+            panel.append("<button id = 'done'>DONE</button>");
         }
     },
 
@@ -81,6 +81,10 @@ var triviaGame = {
 
     results: function() {
         clearInterval(timer);
+
+        panel.html("<h2>CONGRATS! All done!</h2>");
+        panel.append("<h3>Correct answers: " + this.correct + "</h3>");
+        panel.append("<h3>Wrong ansers: " + this.incorrect + "</h3>");
     }
 
 
