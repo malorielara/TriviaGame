@@ -47,5 +47,12 @@ var triviaGame = {
         if(triviaGame.counter == 0) {
             console.log("TIME UP!");
         }
+        game.done();
+
+        start: function() {
+            timer = setInterval(triviaGame.counter);
+        }
+
+
     }
 }
