@@ -81,7 +81,7 @@ var triviaGame = {
         //     $('#countdownExample .values').html('KABOOM!!');
         // });
 
-        $("#sub-wrapper").prepend("<h2>Time Remaining: <span id = 'count'><120</span> Seconds left..</h2>")
+        $("#sub-wrapper").prepend("<h2>Time Remaining: <span id = 'count'>120</span> Seconds left..</h2>")
         
 
         $("#start").remove();
@@ -89,8 +89,8 @@ var triviaGame = {
         for (var i = 0; i < questions.length; i++) {
             panel.append("<h2>" + questions[i].question + "</h2>");
             for (var j = 0; j < questions[i].answers.length; j++) {
-                panel.prepend("<input type = 'radio' name = 'questions'" + i + 
-                "'value = '" + questions[i].answers[j] + "''>" + questions.answers[j]);
+                panel.append("<input type = 'radio' name = 'questions'" + i + 
+                "'value = '" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
             }
             panel.append("<button id = 'done'>DONE</button>");
         }
