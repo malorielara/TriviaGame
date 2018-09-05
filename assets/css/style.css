@@ -44,6 +44,7 @@ h1 {
 }  
 
 h2 {
+    margin-top: 15px;
     margin-bottom: 15px;
     font-size: 25px;
 }
@@ -58,3 +59,7 @@ h3 {
     background: white;
     border: 2px solid black;
 }
+
+/* #radio {
+    margin: 2%;
+} */

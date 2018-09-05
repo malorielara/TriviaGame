@@ -12,35 +12,35 @@ var panel = $("#quiz-part");
 
 // questions asked
 var questions = [{
-    question: "Who is not a character in Friends?",
+    question: "1. Who is not a character in Friends?",
     answers: ["Phoebe", "Rachel", "Ross", "Karen"],
     correctanswer: "Karen"
 }, {
-    question: "Who has a twin?",
+    question: "2. Who has a twin?",
     answers: ["Ross", "Joey", "Phoebe", "Chandler"],
     correctanswer: "Pheobe"
 }, {
-    question: "What is Monica's apartment number?",
+    question: "3. What is Monica's apartment number?",
     answers: ["20", "21", "6", "13"],
     correctanswer: "20"
 }, {
-    question: "What is the name of Ross's monkey?",
+    question: "4. What is the name of Ross's monkey?",
     answers: ["Max", "Joey", "Marcel", "Martin"],
     correctanswer: "Marcel"
 }, {
-    question: "What was Rachel's first job?",
+    question: "5. What was Rachel's first job?",
     answers: ["Assistant", "Waitress", "Barista", "Chef"],
     correctanswer: "Waitress"
 }, {
-    question: "Who had a child together?",
+    question: "6. Who had a child together?",
     answers: ["Ross and Rachel", "Joey and Monica", "Chandler and Rachel", "Joey and Rachel"],
     correctanswer: "Ross and Rachel"
 }, {
-    question: "Who is the sole owner of the chick and duck?",
+    question: "7. Who is the sole owner of the chick and duck?",
     answers: ["Pheobe", "Monica", "Chandler", "Joey"],
     correctanswer: "Joey"
 }, {
-    question: "How many total seasons of Friends?",
+    question: "8. How many total seasons of Friends?",
     answers: ["12", "14", "10", "8"],
     correctanswer: "10"
 }];
