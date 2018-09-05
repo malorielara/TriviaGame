@@ -16,7 +16,11 @@ body {
     height: 100%;
     background-color: slategray;
     border: 0;
-    padding-bottom: 850px;
+    padding-bottom: 880px;
+}
+
+#sub-wrapper {
+    color: white;
 }
 
 button {

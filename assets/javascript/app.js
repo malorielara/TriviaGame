@@ -64,21 +64,25 @@ var triviaGame = {
 
         // TODO: add 'time remaining'
 
-        var timer = new Timer();
-        timer.start({
-            countdown: true,
-            startValues: {
-                seconds: 30
-            }
-        });
-        $('#countdownExample .values').html(timer.getTimeValues().toString());
-        timer.addEventListener('secondsUpdated', function (e) {
-            $('#countdownExample .values').html(timer.getTimeValues().toString());
-        });
-        timer.addEventListener('targetAchieved', function (e) {
-            $('#countdownExample .values').html('KABOOM!!');
-        });
-        var
+        // this did not work
+        // created errors in the code and stopped all running
+        // var timer = new Timer();
+        // timer.start({
+        //     countdown: true,
+        //     startValues: {
+        //         seconds: 30
+        //     }
+        // });
+        // $('#countdownExample .values').html(timer.getTimeValues().toString());
+        // timer.addEventListener('secondsUpdated', function (e) {
+        //     $('#countdownExample .values').html(timer.getTimeValues().toString());
+        // });
+        // timer.addEventListener('targetAchieved', function (e) {
+        //     $('#countdownExample .values').html('KABOOM!!');
+        // });
+
+        $("#sub-wrapper").prepend("<h2>Time Remaining: <span id = 'count'><120</span> Seconds left..</h2>")
+        
 
         $("#start").remove();
 
@@ -92,49 +96,59 @@ var triviaGame = {
     },
 
     // done function
+    // if value entered equals the correct answer then add to correct talley
+    // otherwise, add to the incorrect count if wrong
     done: function () {
+        // for question 1
         if ($(this).val() == questions[0].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
+        // question 2
         if ($(this).val() == questions[1].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
-
+        
+        // question 3
         if ($(this).val() == questions[2].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
+        // question 4
         if ($(this).val() == questions[3].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
+        // question 5
         if ($(this).val() == questions[4].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
+        // question 6
         if ($(this).val() == questions[5].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
+        // question 7
         if ($(this).val() == questions[6].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
+        // question 8
         if ($(this).val() == questions[7].correct) {
             triviaGame.correct++;
         } else {
