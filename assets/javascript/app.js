@@ -89,7 +89,8 @@ var triviaGame = {
         for (var i = 0; i < questions.length; i++) {
             panel.append("<h2>" + questions[i].question + "</h2>");
             for (var j = 0; j < questions[i].answers.length; j++) {
-
+                panel.prepend("<input type = 'radio' name = 'questions'" + i + 
+                "'value = '" + questions[i].answers[j] + "''>" + questions.answers[j]);
             }
             panel.append("<button id = 'done'>DONE</button>");
         }
