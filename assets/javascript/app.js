@@ -1,16 +1,15 @@
-$(document).on("click", "#start", function() {
+$(document).on("click", "#start", function () {
     triviaGame.start();
 });
 
-$(document).on("click", "#done", function() {
+$(document).on("click", "#done", function () {
     triviaGame.done();
 });
 
 var panel = $("#quiz-part");
 
 // questions asked
-var questions = [
-    {
+var questions = [{
     question: "Who is not a character in Friends?",
     answers: ["Phoebe", "Rachel", "Ross", "Karen"],
     correctanswer: "Karen"
@@ -65,6 +64,22 @@ var triviaGame = {
 
         // TODO: add 'time remaining'
 
+        var timer = new Timer();
+        timer.start({
+            countdown: true,
+            startValues: {
+                seconds: 30
+            }
+        });
+        $('#countdownExample .values').html(timer.getTimeValues().toString());
+        timer.addEventListener('secondsUpdated', function (e) {
+            $('#countdownExample .values').html(timer.getTimeValues().toString());
+        });
+        timer.addEventListener('targetAchieved', function (e) {
+            $('#countdownExample .values').html('KABOOM!!');
+        });
+        var
+
         $("#start").remove();
 
         for (var i = 0; i < questions.length; i++) {
@@ -77,50 +92,50 @@ var triviaGame = {
     },
 
     // done function
-    done: function() {
-        if($(this).val() == questions[0].correct) {
+    done: function () {
+        if ($(this).val() == questions[0].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
-        if($(this).val() == questions[1].correct) {
+        if ($(this).val() == questions[1].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
-        if($(this).val() == questions[2].correct) {
+        if ($(this).val() == questions[2].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
-        if($(this).val() == questions[3].correct) {
+        if ($(this).val() == questions[3].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
-        if($(this).val() == questions[4].correct) {
+        if ($(this).val() == questions[4].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
-        if($(this).val() == questions[5].correct) {
+        if ($(this).val() == questions[5].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
-        if($(this).val() == questions[6].correct) {
+        if ($(this).val() == questions[6].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
         };
 
-        if($(this).val() == questions[7].correct) {
+        if ($(this).val() == questions[7].correct) {
             triviaGame.correct++;
         } else {
             triviaGame.incorrect++;
@@ -131,7 +146,7 @@ var triviaGame = {
 
     // shows results
     // shows how many questions answered right and wrong
-    results: function() {
+    results: function () {
         clearInterval(timer);
 
         panel.html("<h2>CONGRATS! All done!</h2>");
