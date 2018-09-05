@@ -1,7 +1,9 @@
+// start
 $(document).on("click", "#start", function () {
     triviaGame.start();
 });
 
+// done
 $(document).on("click", "#done", function () {
     triviaGame.done();
 });
@@ -44,6 +46,7 @@ var questions = [{
 }];
 
 var timer;
+
 var triviaGame = {
     correct: 0,
     incorrect: 0,
@@ -81,9 +84,11 @@ var triviaGame = {
         //     $('#countdownExample .values').html('KABOOM!!');
         // });
 
+        // adds the timer above the questions with 120 seconds to start
         $("#sub-wrapper").prepend("<h2>Time Remaining: <span id = 'count'>120</span> Seconds left..</h2>")
         
 
+        // removes the start button after clicked
         $("#start").remove();
 
         for (var i = 0; i < questions.length; i++) {
@@ -92,14 +97,19 @@ var triviaGame = {
                 panel.append("<input type = 'radio' name = 'questions'" + i + 
                 "'value = '" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
             }
-            panel.append("<button id = 'done'>DONE</button>");
+            // done button after every question.. 
+            //how to get rid of this and just make one at the end??
+            // panel.append("<button id = 'done'>DONE</button>");
         }
+        // this goes here..
+        panel.append("<button id = 'done'>DONE</button>");
     },
 
     // done function
     // if value entered equals the correct answer then add to correct talley
     // otherwise, add to the incorrect count if wrong
     done: function () {
+        
         // for question 1
         if ($(this).val() == questions[0].correct) {
             triviaGame.correct++;
